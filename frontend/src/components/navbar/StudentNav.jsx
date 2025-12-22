@@ -28,7 +28,7 @@ export default function StudentNav() {
 
       {/* RIGHT */}
       <div className="nav-actions">
-        <button className="theme-circle" onClick={toggleTheme}>
+        <button className="theme-btn" onClick={toggleTheme}>
           {theme === "dark" ? <FaSun /> : <FaMoon />}
         </button>
 
