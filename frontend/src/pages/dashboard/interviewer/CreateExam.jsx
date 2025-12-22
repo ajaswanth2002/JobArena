@@ -61,33 +61,64 @@ export default function CreateExam() {
     //         toast.error("Server Error");
     //     } finally {setLoading(false);}
     // }
-    async function handleSubmit(e) {
+//     async function handleSubmit(e) {
+//   e.preventDefault();
+//   setLoading(true);
+
+//   try {
+//     const payload = {
+//       title,
+//       topics,
+//       role,
+//       examDate,
+//       startTime,
+//       durationMinutes: Number(durationMinutes),
+//       totalMarks: Number(totalMarks),
+//     };
+
+//     console.log("Exam payload:", payload);
+
+//     // ✅ TEMP SUCCESS (NO BACKEND)
+//     toast.success("Exam created successfully!");
+
+//     setTimeout(() => {
+//       navigate("/interviewer/tests");
+//     }, 1000);
+
+//   } catch (err) {
+//     console.error(err);
+//     toast.error("Something went wrong");
+//   } finally {
+//     setLoading(false);
+//   }
+// }
+async function handleSubmit(e) {
   e.preventDefault();
   setLoading(true);
 
   try {
     const payload = {
       title,
-      topics,
       role,
+      topics: topics.join(","), // backend expects string
       examDate,
       startTime,
       durationMinutes: Number(durationMinutes),
       totalMarks: Number(totalMarks),
+      createdBy: localStorage.getItem("username")
     };
 
-    console.log("Exam payload:", payload);
+    await axios.post("http://localhost:8080/api/exams", payload);
 
-    // ✅ TEMP SUCCESS (NO BACKEND)
     toast.success("Exam created successfully!");
 
     setTimeout(() => {
-      navigate("/interviewer/tests");
+      navigate("/interviewer-dashboard");
     }, 1000);
 
   } catch (err) {
     console.error(err);
-    toast.error("Something went wrong");
+    toast.error("Server error");
   } finally {
     setLoading(false);
   }

@@ -3,29 +3,49 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Navbar from "../components/Navbar";
+import axios from "axios";
 function Login() {
   const [showPass, setShowPass] = useState(false);
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
 function handleLogin(e) {
   e.preventDefault();
 
-  if (email === "s124" && password === "123@") {
-    localStorage.setItem("role", "student");
-    window.dispatchEvent(new Event("roleChange"));
+  // if (email === "s124" && password === "123@") {
+  //   localStorage.setItem("role", "student");
+  //   window.dispatchEvent(new Event("roleChange"));
+  //   navigate("/student-dashboard");
+  // } 
+  // else if (email === "i124" && password === "123@") {
+  //   localStorage.setItem("role", "interviewer");
+  //   window.dispatchEvent(new Event("roleChange"));
+  //   navigate("/interviewer-dashboard");
+  // } 
+  // else {
+  //   alert("Invalid credentials");
+  // }
+
+ axios.post("http://localhost:8080/api/auth/login", {
+  username,
+  password
+})
+.then(res => {
+  const role = res.data.role.toLowerCase(); // ✅ FIXED
+
+  localStorage.setItem("role", role);
+  window.dispatchEvent(new Event("roleChange"));
+
+  if (role === "student") {
     navigate("/student-dashboard");
-  } 
-  else if (email === "i124" && password === "123@") {
-    localStorage.setItem("role", "interviewer");
-    window.dispatchEvent(new Event("roleChange"));
+  } else if (role === "interviewer") {
     navigate("/interviewer-dashboard");
-  } 
-  else {
-    alert("Invalid credentials");
   }
-}
+})
+.catch(() => {
+  alert("Invalid credentials");
+});}
 
   return (
     <>
@@ -40,8 +60,8 @@ function handleLogin(e) {
             className="login-input"
             placeholder="Username"
             required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
 
           <div className="password-container">

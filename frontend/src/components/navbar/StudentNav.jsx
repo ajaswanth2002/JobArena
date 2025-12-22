@@ -14,20 +14,28 @@ export default function StudentNav() {
 
   return (
     <nav className="navbar">
+      {/* LEFT */}
       <div className="nav-logo">
         <Link to="/student-dashboard">JobArena</Link>
       </div>
 
+      {/* CENTER */}
       <div className="nav-links">
+        <Link to="/student-dashboard">Dashboard</Link>
         <Link to="/student/jobs">Jobs</Link>
         <Link to="/student/exams">Exams</Link>
-        <Link to="/student-dashboard">Dashboard</Link>
-        <span onClick={logout} className="nav-link logout">Logout</span>
       </div>
 
-      <button className="theme-btn" onClick={toggleTheme}>
-        {theme === "dark" ? <FaSun /> : <FaMoon />}
-      </button>
+      {/* RIGHT */}
+      <div className="nav-actions">
+        <button className="theme-circle" onClick={toggleTheme}>
+          {theme === "dark" ? <FaSun /> : <FaMoon />}
+        </button>
+
+        <button className="logout-btn" onClick={logout}>
+          Logout
+        </button>
+      </div>
     </nav>
   );
 }

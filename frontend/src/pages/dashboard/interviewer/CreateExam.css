@@ -1,171 +1,44 @@
-/* .create-exam-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 15px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-.create-exam-card {
-  background: #0b1120;
-  border-radius: 16px;
-  padding: 30px 28px;
-  max-width: 650px;
-  width: 100%;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  color: #e5e7eb;
-}
-
-.create-exam-card h1 {
-  font-size: 26px;
-  margin-bottom: 5px;
-  color: var(--text-main);
-}
-
-.create-exam-card .subtitle {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 24px;
-}
-
-.create-exam-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 14px;
-  color: #e5e7eb;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg-main);;
-  color: var(--text-main);
-  font-size: 14px;
-  outline: none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #22c55e;
-  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4);
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-.form-row {
-  display: flex;
-  gap: 14px;
-}
-
-.form-row .form-group {
-  flex: 1;
-}
-.primary-btn,
-.secondary-btn {
-  margin-top: 4px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.primary-btn {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #020617;
-  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
-}
-
-.primary-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 16px 40px rgba(34, 197, 94, 0.5);
-}
-
-.primary-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-
-.secondary-btn {
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-}
-
-.secondary-btn:hover {
-  background: rgba(15, 23, 42, 0.9);
-  color: #e5e7eb;
-}
-
-@media (max-width: 640px) {
-  .create-exam-card {
-    padding: 22px 18px;
-  }
-
-  .form-row {
-    flex-direction: column;
-  }
-}*/
-
-/* ===================== CREATE TEST PAGE ===================== */
+/* =========================================================
+   CREATE EXAM PAGE
+========================================================= */
 
 .create-exam-page {
   min-height: 100vh;
   background: var(--bg-main);
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 30px 15px;
+  align-items: center;
+  padding: 32px 16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .create-exam-card {
+  width: 100%;
+  max-width: 680px;
   background: var(--bg-card);
   border-radius: 18px;
   padding: 32px 28px;
-  max-width: 650px;
-  width: 100%;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  color: #e5e7eb;
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
 .create-exam-card h1 {
-  font-size: 28px;
-  margin-bottom: 6px;
-  color: var(--text-main);
   text-align: center;
+  font-size: 28px;
+  color: var(--text-main);
 }
 
 .subtitle {
-  font-size: 14px;
   text-align: center;
+  font-size: 14px;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
-/* FORM ======================================== */
+/* =========================================================
+   FORM
+========================================================= */
+
 .create-exam-form {
   display: flex;
   flex-direction: column;
@@ -180,26 +53,27 @@
 
 .form-group label {
   font-size: 14px;
-  color: #e5e7eb;
+  font-weight: 500;
+  color: var(--text-main);
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
-  font-weight: bold;
+.form-group select,
+.form-group textarea {
   padding: 12px 14px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: var(--bg-secondary);;
+  background: var(--bg-secondary);
   color: var(--text-main);
   font-size: 14px;
   outline: none;
 }
 
 .form-group input:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
   border-color: #22c55e;
-  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.45);
 }
 
 .form-row {
@@ -211,155 +85,47 @@
   flex: 1;
 }
 
-/* BUTTONS ===================================== */
-.primary-btn,
-.secondary-btn {
-  margin-top: 6px;
-  padding: 12px 15px;
-  border-radius: 10px;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .primary-btn {
   background: linear-gradient(135deg, #22c55e, #16a34a);
   color: #020617;
-  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .primary-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.5);
+  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.45);
 }
 
 .secondary-btn {
   background: transparent;
   color: var(--text-muted);
   border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .secondary-btn:hover {
   background: rgba(148, 163, 184, 0.18);
 }
 
-/* RESPONSIVE */
-@media (max-width: 650px) {
-  .form-row {
-    flex-direction: column;
-  }
-}
+/* =========================================================
+   TOPICS
+========================================================= */
 
-/* ===================== TESTS LIST PAGE ===================== */
-
-.tests-container {
-  padding: 30px;
-  font-family: Poppins, sans-serif;
-}
-
-.tests-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.tests-header h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.create-btn {
-  background: #4e73df;
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: white;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-}
-
-.create-btn:hover {
-  background: #3a5ccb;
-}
-
-.tests-grid {
-  margin-top: 25px;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.test-card {
-  background: var(--white);;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-  transition: transform 0.15s ease;
-}
-
-.test-card:hover {
-  transform: translateY(-2px);
-}
-
-.test-card h2 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.test-card p {
-  margin: 3px 0;
-  font-size: 14px;
-  color: #475569;
-}
-
-.view-btn {
-  width: 100%;
-  margin-top: 12px;
-  background: #1a8cff;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.view-btn:hover {
-  background: #0066cc;
-}
-.topics-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  background: var(--bg-secondary);;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-}
-
-.topic-chip {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.08);
-  padding: 6px 12px;
-  border-radius: 20px;
-  color: #e5e7eb;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.topic-chip input {
-  cursor: pointer;
-}
 .selected-topic-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 10px;
 }
 
 .chip {
@@ -370,7 +136,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .chip-close {
@@ -383,33 +149,32 @@
 
 .topic-search-input {
   width: 100%;
-  padding: 10px;
-  background: var(--bg-main);;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 8px;
-  color: white;
+  color: var(--text-main);
   outline: none;
-  margin-bottom: 10px;
 }
 
 .topics-dropdown {
   max-height: 160px;
   overflow-y: auto;
-  background: var(--bg-secondary);;
-  border: 1px solid #334155;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 6px;
 }
 
 .topic-option {
-  padding: 8px;
-  color: #e5e7eb;
-  cursor: pointer;
+  padding: 8px 10px;
   border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-main);
 }
 
 .topic-option:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .topic-option.selected {
@@ -417,9 +182,13 @@
   color: #020617;
   font-weight: 600;
 }
-/* -------------------------------------------------------------- */
+
+/* =========================================================
+   TEST LIST PAGE
+========================================================= */
+
 .tests-container {
-  padding: 25px;
+  padding: 28px;
 }
 
 .tests-header {
@@ -428,37 +197,68 @@
   align-items: center;
 }
 
+.tests-header h1 {
+  font-size: 28px;
+  color: var(--text-main);
+}
+
 .create-btn {
-  background-color: #4e73df;
-  border: none;
-  padding: 10px 18px;
+  background: var(--primary);
   color: white;
-  font-weight: bold;
+  padding: 10px 18px;
   border-radius: 8px;
+  border: none;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .tests-grid {
-  margin-top: 20px;
+  margin-top: 24px;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .test-card {
-  background: var(--white);;
-  border-radius: 12px;
+  background: var(--bg-card);
+  border-radius: 14px;
   padding: 18px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease;
+}
+
+.test-card:hover {
+  transform: translateY(-3px);
+}
+
+.test-card h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.test-card p {
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
 .view-btn {
+  margin-top: 12px;
   width: 100%;
-  margin-top: 10px;
   background: #20c997;
   border: none;
-  padding: 8px 10px;
-  border-radius: 6px;
+  padding: 10px;
+  border-radius: 8px;
   color: white;
+  font-weight: 600;
   cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 680px) {
+  .form-row {
+    flex-direction: column;
+  }
 }

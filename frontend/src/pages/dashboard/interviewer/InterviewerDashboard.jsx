@@ -1,6 +1,6 @@
+import Navbar from "../../../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./InterviewerDashboard.css";
-import Navbar from "../../../components/Navbar.jsx";
 
 export default function InterviewerDashboard() {
   const navigate = useNavigate();
@@ -8,21 +8,17 @@ export default function InterviewerDashboard() {
   return (
     <>
       <Navbar />
-
       <div className="dash-container">
-        <div className="dash-header">
-          <h1>💼 Interviewer Dashboard</h1>
-        </div>
-
-        <p>Manage jobs and exams.</p>
+        <h1>💼 Interviewer Dashboard</h1>
+        <p>Create jobs and exams for candidates</p>
 
         <div className="dash-cards">
           <div
             className="dash-card"
             onClick={() => navigate("/interviewer/post-job")}
           >
-            <h3>Post Job</h3>
-            <p>Create new job openings</p>
+            <h3>Create Job</h3>
+            <p>Post a new job opening</p>
           </div>
 
           <div
@@ -30,7 +26,7 @@ export default function InterviewerDashboard() {
             onClick={() => navigate("/interviewer/create-exam")}
           >
             <h3>Create Exam</h3>
-            <p>Setup online tests</p>
+            <p>Setup hiring test</p>
           </div>
         </div>
       </div>
