@@ -1,0 +1,41 @@
+.dash-container {
+  padding: 40px;
+}
+
+.dash-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.dash-card {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  width: 220px;
+  transition: 0.2s;
+}
+
+.dash-card:hover {
+  background: var(--bg-muted);;
+}
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
