@@ -18,6 +18,7 @@ JobArena is a full-stack web application designed to help users search, post, an
 🛠️ Tech Stack
 
 Frontend
+```
 	•	React JS
 	•	JavaScript (ES6)
 	•	HTML5
@@ -35,7 +36,7 @@ Tools
 	•	Git & GitHub
 	•	VS Code
 	•	Postman
-
+```
 ⸻
 
 ⚙️ Application Flow
