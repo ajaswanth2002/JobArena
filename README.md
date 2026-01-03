@@ -18,28 +18,31 @@ JobArena is a full-stack web application designed to help users search, post, an
 🛠️ Tech Stack
 
 Frontend
-```
+
 	•	React JS
 	•	JavaScript (ES6)
 	•	HTML5
 	•	CSS3
 
 Backend
+
 	•	Java
 	•	Spring Boot
 	•	RESTful APIs
 
 Database
+
 	•	MySQL
 
 Tools
+
 	•	Git & GitHub
 	•	VS Code
 	•	Postman
-```
 ⸻
 
 ⚙️ Application Flow
+
 	1.	User registers and logs in to the application
 	2.	Job seekers can browse job and internship listings
 	3.	Recruiters can create and manage job postings
@@ -49,6 +52,7 @@ Tools
 ⸻
 
 📂 Project Structure (High Level)
+
 	•	frontend/ – React UI components
 	•	backend/ – Spring Boot REST APIs
 	•	database/ – MySQL schema and queries
@@ -56,6 +60,7 @@ Tools
 ⸻
 
 ✅ Key Learnings
+
 	•	Full-stack application development
 	•	REST API design and integration
 	•	Frontend and backend communication
